@@ -4,19 +4,26 @@ from common.icontroller import IController
 
 
 class View(IView):
-    # To be completed
+    #def __init__(self):
+        self.__model = None
+        self.__controller = None
 
     def setActionPerformer(self, actionPerformer: IController) -> None:
-        pass
+        self.__controller = actionPerformer
 
     def setModel(self, model: IModel) -> None:
-        pass
+        self.__model = model
 
     def setController(self, model: IController) -> None:
-        pass
+        self.__controller = controller
 
     def showMessage(self, message: str) -> None:
-        pass
+        print(message)
 
     def askProposal(self) -> int:
-        pass
+        try:
+            val = int(input(f"Essai n°{self.__model.getProposalCount() + 1} - Entrez un nombre : "))
+            return val
+        except ValueError:
+            self.showMessage("Veuillez entrer un nombre valide.")
+            return self.askProposal()
