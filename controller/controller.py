@@ -1,4 +1,3 @@
-# controller.py
 from common.imodel import IModel
 from common.iview import IView
 from common.icontroller import IController
@@ -39,7 +38,6 @@ class Controller(IController):
         self.__view.showMessage("Perdu !")
 
     def performProposeNumber(self, num: int) -> None:
-        # ici on ne l’utilise pas dans start(), mais on respecte l’interface
         assert self.__model is not None
         assert self.__view is not None
         result = self.__model.compareToMagicNumber(num)

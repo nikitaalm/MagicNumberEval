@@ -1,4 +1,3 @@
-# model.py
 import random
 from common.imodel import IModel
 

@@ -4,8 +4,8 @@
 
 ## Binôme
 
-- Nom Prénom - pseudo github
-- Nom Prénom - pseudo github
+- Bouckaert Rémi - remibckrt-bit
+- Almodovar Nikita - nikitaalm
 
 ## Sujet
 

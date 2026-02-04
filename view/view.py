@@ -1,4 +1,3 @@
-# view.py
 from common.iview import IView
 from common.imodel import IModel
 from common.icontroller import IController
