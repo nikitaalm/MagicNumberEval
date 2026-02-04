@@ -1,26 +1,25 @@
+# model.py
 import random
-
 from common.imodel import IModel
 
 
 class Model(IModel):
-    # To be completed
     def __init__(self):
-        self.__magicNumber = random.randint(1, 100)  # Exemple de plage
-        self.__proposalCount = 0
-        self.__maxNumberOfProposals = 10
+        self.__magic_number = random.randint(0, 100)
+        self.__proposal_count = 0
+        self.__max_proposals = 10
 
     def compareToMagicNumber(self, num: int) -> int:
-        self.__proposalCount += 1
-        if num < self.__magicNumber:
-            return -1  # Plus grand
-        elif num > self.__magicNumber:
-            return 1  # Plus petit
+        self.__proposal_count += 1
+        if num == self.__magic_number:
+            return 0
+        elif num < self.__magic_number:
+            return -1
         else:
-            return 0  # Gagné
+            return 1
 
     def getProposalCount(self) -> int:
-        return self.__proposalCount
+        return self.__proposal_count
 
     def getMaxNumberOfProposals(self) -> int:
-        return self.__maxNumberOfProposals
+        return self.__max_proposals
